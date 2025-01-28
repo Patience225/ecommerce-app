@@ -11,42 +11,6 @@ body {
   color: #333;
   background: linear-gradient(to bottom, #fdfcfb, #e2d1c3); /* Merged backgrounds */
   overflow-x: hidden;
-  animation: fadeIn 0.5s ease-in-out;
-}
-
-/* Dark Mode styles */
-body.dark-mode {
-  background-color: #121212;
-  color: white;
-}
-
-button {
-  background-color: #ff6f61;
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-/* Light Mode styles */
-body.light-mode {
-  background-color: white;
-  color: black;
-}
-
-.spinner {
-  border: 4px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 4px solid #ff6f61;
-  width: 30px;
-  height: 30px;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-      transform: rotate(0deg);
-  }
-  100% {
-      transform: rotate(360deg);
-  }
 }
 
 /* Header Styles */
@@ -269,7 +233,6 @@ header .nav-links li a:hover {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   animation: cartAnimation 0.3s ease-out;
-  animation: slideIn 0.3s ease-in-out;
 }
 
 .cart-item:hover {
@@ -315,32 +278,6 @@ header .nav-links li a:hover {
   }
 }
 
-@keyframes fadeIn {
-  from {
-      opacity: 0;
-  }
-  to {
-      opacity: 1;
-  }
-}
-
-@keyframes slideIn {
-  from {
-      transform: translateX(-100%);
-      opacity: 0;
-  }
-  to {
-      transform: translateX(0);
-      opacity: 1;
-  }
-}
-
-button:hover {
-  background-color: #d35d56;
-  transform: scale(1.05);
-}
-
-
 .products-container {
   display: flex;
   flex-wrap: wrap;
@@ -365,24 +302,6 @@ button:hover {
 .page {
   animation: fadeIn 0.5s ease-in-out;
 }
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .products-container {
-      flex-direction: column;
-      align-items: center;
-  }
-
-  .product-item {
-      width: 90%;
-  }
-
-  nav a {
-      display: block;
-      margin: 10px 0;
-  }
-}
-
 
 /* Footer */
 footer {

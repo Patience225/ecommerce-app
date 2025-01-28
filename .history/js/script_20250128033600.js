@@ -56,27 +56,3 @@ function addToWishlist(productId) {
     }
 }
 
-function toggleDarkMode() {
-  document.body.classList.toggle('dark-mode');
-  const mode = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
-  localStorage.setItem('mode', mode);
-}
-
-// Set initial mode on page load
-document.addEventListener('DOMContentLoaded', () => {
-  if (localStorage.getItem('mode') === 'dark') {
-      document.body.classList.add('dark-mode');
-  }
-});
-
-function showSpinner() {
-  const spinner = document.createElement('div');
-  spinner.classList.add('spinner');
-  document.body.appendChild(spinner);
-
-  // Remove spinner after 2 seconds
-  setTimeout(() => spinner.remove(), 2000);
-}
-
-// Call showSpinner during data fetch
-fetchProducts();

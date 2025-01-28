@@ -20,6 +20,7 @@ body.dark-mode {
   color: white;
 }
 
+
 button {
   background-color: #ff6f61;
   transition: background-color 0.3s, transform 0.2s;
@@ -31,23 +32,6 @@ body.light-mode {
   color: black;
 }
 
-.spinner {
-  border: 4px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 4px solid #ff6f61;
-  width: 30px;
-  height: 30px;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-      transform: rotate(0deg);
-  }
-  100% {
-      transform: rotate(360deg);
-  }
-}
 
 /* Header Styles */
 header {
