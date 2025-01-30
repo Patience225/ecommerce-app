@@ -12,20 +12,6 @@ const products = [
   { name: "Women's Handbag", category: "accessories", price: "$50" }
 ];
 
-// Check if the user is logged in
-window.onload = function() {
-  const userProfile = document.getElementById('user-profile');
-  const currentUser = JSON.parse(localStorage.getItem('currentUser'));
-
-  if (currentUser) {
-    userProfile.innerHTML = `
-      <span>Welcome, ${currentUser.username}</span>
-      <a href="logout.html">Logout</a>
-    `;
-  } else {
-    userProfile.innerHTML = `<a href="login.html">Login</a>`;
-  }
-};
 
 
 // Render Products

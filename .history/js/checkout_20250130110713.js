@@ -42,24 +42,3 @@ window.onload = function() {
   totalElement.innerHTML = `<p>Total: $${totalAmount}</p>`;
   orderSummary.appendChild(totalElement);
 };
-
-// Handle form submission
-const shippingForm = document.getElementById('shipping-form');
-shippingForm.onsubmit = function(event) {
-  event.preventDefault();
-
-  // Get shipping details
-  const shippingDetails = {
-    name: document.getElementById('name').value,
-    address: document.getElementById('address').value,
-    city: document.getElementById('city').value,
-    zip: document.getElementById('zip').value
-  };
-
-  // Clear the cart and display order confirmation
-  localStorage.removeItem('cart');
-
-  // Display order confirmation
-  alert(`Order placed successfully!\nName: ${shippingDetails.name}\nAddress: ${shippingDetails.address}, ${shippingDetails.city}, ${shippingDetails.zip}`);
-  window.location.href = 'order-confirmation.html';
-};
